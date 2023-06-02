@@ -1,0 +1,42 @@
+.mobile-login {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    visibility: hidden;
+    transition: visibility 0.1s;
+
+    &__btn {
+        display: block;
+        padding: 0.9rem 2rem;
+        @include singleFont($Poppins, 400, 3rem, 4.5rem);
+        color: $headerMobile;
+        border: 1px solid;
+        border-radius: 0.5rem;
+        transition: scale 0.3s;
+        
+        &:focus,
+        &:hover {
+            scale: 1.2;
+        }
+
+        &:active {
+            animation: blim 0.1s;
+        }
+
+        &_sign-up {
+            border-color: $headerMobile;
+        }
+
+        &_login {
+            border-color: transparent;
+
+            &:focus,
+            &:hover {
+            color: $mainAccent;
+            border-color: $mainAccent;
+        }
+        }
+    }
+}

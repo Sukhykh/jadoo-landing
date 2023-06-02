@@ -1,0 +1,6 @@
+.language {
+    @include singleFont($GoogleSans, 500, 1.7rem, 2.2rem);
+    color: $headerDesltop;
+    background-color: transparent;
+    outline: none;
+}

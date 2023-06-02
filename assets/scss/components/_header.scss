@@ -1,0 +1,61 @@
+.header {
+    position: absolute;
+    top: 4.7rem;
+    width: 100%;
+
+    &:has(.burger-btn__input:checked) {
+        .mobile-menu {
+            visibility: hidden;
+        }
+
+        .mobile-login {
+            visibility: visible;
+        }
+
+        .burger-btn__svg {
+            transform: rotateY(180deg);
+        }
+    }
+
+    @media screen and (max-width: $toMobile) {
+        position: static;
+        padding-top: 3.7rem;
+        background-color: $coloredBackground;
+    }
+
+    &__container {
+        @include container(1160px)
+    }
+
+    &__desktop-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: $toMobile) {
+            justify-content: center;
+            gap: 30vw;
+        }
+
+        @media screen and (max-width: $minScreen) {
+            justify-content: space-between;
+            gap: 1rem;
+        }
+    }
+
+    &__icon-bar {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__mobile-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: $toMobile) {
+            display: none;
+        }
+    }
+}

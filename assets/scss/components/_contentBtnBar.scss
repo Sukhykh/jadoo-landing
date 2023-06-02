@@ -1,0 +1,101 @@
+.btn-bar {
+    display: flex;
+    align-items: center;
+    gap: 4.4rem;
+
+    @media screen and (max-width: $toMobile) {
+        flex-direction: column;
+    }
+
+    &__find-out-more {
+        display: inline-flex;
+        padding: 1.9rem 2.7rem;
+        border: 0.1rem solid $orangeButton;
+        border-radius: 1rem;
+        background-color: $orangeButton;
+        @include singleFont($GoogleSans, 500, 1.8rem, 2.3rem);
+        color: $white;
+        box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+        transition: all 0.3s linear;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            border-color: $playDemo;
+            color: $playDemo;
+            box-shadow: 0px 15px 30px rgba(94, 98, 130, 0.3);
+        }
+
+        &:active {
+            animation: blim 0.1s;
+        }
+    }
+
+    &__play-demo {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 5.2rem;
+        z-index: -1;
+        background-color: $mainAccent;
+        border-radius: 2.6rem;
+        box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+        transition: all 0.3s linear;
+    }
+
+        &:hover,
+        &:focus {
+            &::after {
+                width: 100%;
+            }
+
+            & .btn-bar__play-text {
+                color: $white;
+            }
+        }
+
+        &:active {
+            &::after {
+                animation: blimDark 0.1s;
+            }
+        }
+    }
+
+    &__play-btn {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.2rem;
+        height: 5.2rem;
+        border-radius: 50%;      
+
+        &::after {
+            position: absolute;
+            margin-left: 0.6rem;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 1.6rem solid $white;
+            border-top: 0.8rem solid transparent;
+            border-bottom: 0.8rem solid transparent;
+            border-right: 0;
+        }
+    }
+
+    &__play-text {
+        @include singleFont($Poppins, 500, 1.7rem, 2.6rem);
+        color: $playDemo;
+        text-transform: capitalize;
+        margin-left: 2rem;
+        padding-right: 2rem;
+        transition: all 0.3s linear;
+    }
+}

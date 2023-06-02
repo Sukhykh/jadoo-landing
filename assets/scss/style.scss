@@ -1,0 +1,40 @@
+/* Base resets */
+@import 'reset';
+
+/* General styles */
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'animation';
+
+/* Components */
+@import 'components/logo';
+@import 'components/desktopMenu';
+@import 'components/mobileMenu';
+@import 'components/desktopLogin';
+@import 'components/mobileLogin';
+@import 'components/burgerBtn';
+@import 'components/language';
+@import 'components/contentBtnBar';
+
+@import 'components/header';
+@import 'components/heroSection';
+
+
+/* General styles */
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $mainAccent;
+}

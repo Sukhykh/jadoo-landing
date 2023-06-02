@@ -1,0 +1,24 @@
+@function dinamic($n) {
+	@return calc($n / $maxScreen) * 100 * 1vw;
+}
+
+@mixin container ($width) {
+    max-width: dinamic($width);
+    width: 100%;
+    margin-inline: auto;
+
+    @media screen and (min-width: $maxScreen) {
+        max-width: $width
+    }
+
+    @media screen and (max-width: $toTablet) {
+        max-width: 95vw;
+    }
+}
+
+@mixin singleFont ($style, $fw, $fs, $lh) {
+    font-family: $style;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}

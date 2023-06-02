@@ -1,0 +1,41 @@
+.desktop-login {
+    display: flex;
+    gap: dinamic(30px);
+
+    @media screen and (max-width: $toMobile) {
+        display: none;
+    }
+
+    &__btn {
+        display: block;
+        padding: 0.9rem 2rem;
+        @include singleFont($GoogleSans, 500, 1.7rem, 2.2rem);
+        color: $headerDesltop;
+        border: 1px solid;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+        
+        &:focus,
+        &:hover {
+            scale: 1.2;
+        }
+
+        &:active {
+            animation: blim 0.1s;
+        }
+
+        &_sign-up {
+            border-color: $headerDesltop;
+        }
+
+        &_login {
+            border-color: transparent;
+
+            &:focus,
+            &:hover {
+            color: $mainAccent;
+            border-color: $mainAccent;
+        }
+        }
+    }
+}

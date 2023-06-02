@@ -1,0 +1,33 @@
+@keyframes blim {
+    100% {
+        background-color: $mainAccent;
+    }
+}
+
+@keyframes blimDark {
+    100% {
+        background-color: $mainText;
+        box-shadow: 0px 15px 30px rgba(94, 98, 130, 0.3);
+    }
+}
+
+@keyframes fly {
+    5% {
+        transform: rotateZ(50deg);
+    }
+    10% {
+        transform: rotateZ(25deg);
+    }
+    15% {
+        transform: rotateZ(32deg);
+    }
+    90% {
+        transform: rotateZ(32deg) translateX(200rem) translateY(-100rem);
+    }
+    95% {
+        transform: translateX(0) scale(0);
+    }
+    100% {
+        transform: translateX(0) scale(1)
+    }
+}
