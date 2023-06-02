@@ -211,7 +211,7 @@ a {
 }
 
 .mobile-menu {
-  padding: 9.8rem;
+  padding: 9.8rem 0;
   visibility: visible;
   -webkit-transition: visibility 0.1s;
   transition: visibility 0.1s;
@@ -743,6 +743,7 @@ a {
 @media screen and (max-width: 400px) {
   .hero__title {
     width: 100%;
+    text-align: center;
   }
 }
 .hero__descr {
