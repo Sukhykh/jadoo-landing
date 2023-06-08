@@ -1,4 +1,5 @@
 .btn-bar {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 4.4rem;
@@ -97,5 +98,17 @@
         margin-left: 2rem;
         padding-right: 2rem;
         transition: all 0.3s linear;
+    }
+
+    &__decor {
+        position: absolute;
+        display: none;
+        right: -14.7rem;
+        top: -2.2rem;
+        z-index: -1;
+
+        @media screen and (max-width: $toMobile) {
+            display: block;
+        }
     }
 }

@@ -22,3 +22,26 @@
     font-size: $fs;
     line-height: $lh;
 }
+
+@mixin sectionSubTitle {
+    @include singleFont ($Poppins, 600, 1.8rem, 2.7rem);
+    color: $mainText;
+
+    @media screen and (max-width: $toTablet) {
+        font-size: 2rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+}
+
+@mixin sectionTitle {
+    @include singleFont ($Volkhov, 700, 5rem, 6.4rem);
+    color: $sectionTitle;
+    text-transform: capitalize;
+
+    @media screen and (max-width: $toTablet) {
+        font-size: 4rem;
+        line-height: 5.2rem;
+        text-align: center;
+    }
+}

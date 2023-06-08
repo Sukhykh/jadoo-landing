@@ -1,0 +1,56 @@
+.services {
+    position: relative;
+
+    &__container {
+        margin: 9.2rem auto;
+        padding-inline: 4rem;
+
+        @media screen and (max-width: $toMobile) {
+            margin: 11rem auto;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    &__subtitle {
+        margin-bottom: 1rem;
+        @include sectionSubTitle;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $toMobile) {
+            margin-bottom: 2.3rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 7.4rem;
+        @include sectionTitle;
+
+        @media screen and (max-width: $toMobile) {
+            margin-bottom: 5rem;
+        }
+    }
+    
+    &__card-bar {
+        display: flex;
+        column-gap: 3.5rem;
+        row-gap: 7rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;        
+        right: dinamic(63px);
+        z-index: 1;
+
+        @media screen and (max-width: $toMobile) {
+            display: none;
+        }
+    }
+}
