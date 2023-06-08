@@ -1,4 +1,6 @@
 .burger-btn {
+    cursor: pointer;
+    
     @media screen and (min-width: $toMobile) {
         display: none;
     }

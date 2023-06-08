@@ -5,11 +5,10 @@
 
     &:has(.burger-btn__input:checked) {
         padding-bottom: 2rem;
-       
+
         .header__mobile-wrapper {
             display: none;
         }
-        
 
         .burger-btn__svg {
             transform: rotateY(180deg);

@@ -378,6 +378,9 @@ a {
   border-color: #df6951;
 }
 
+.burger-btn {
+  cursor: pointer;
+}
 @media screen and (min-width: 801px) {
   .burger-btn {
     display: none;
@@ -1435,6 +1438,7 @@ a {
 }
 .services__button {
   display: none;
+  margin-top: 7rem;
   padding: 0.9rem 2rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
