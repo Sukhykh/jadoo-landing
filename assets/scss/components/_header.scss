@@ -4,13 +4,12 @@
     width: 100%;
 
     &:has(.burger-btn__input:checked) {
-        .mobile-menu {
-            visibility: hidden;
+        padding-bottom: 2rem;
+       
+        .header__mobile-wrapper {
+            display: none;
         }
-
-        .mobile-login {
-            visibility: visible;
-        }
+        
 
         .burger-btn__svg {
             transform: rotateY(180deg);
@@ -56,6 +55,61 @@
 
         @media screen and (min-width: $toMobile) {
             display: none;
+        }
+    }
+
+    &__button-wrapper {
+        display: flex;
+        gap: dinamic(42px);
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        align-items: center;
+        gap: dinamic(64px);
+
+        @media screen and (max-width: 900px) {
+            gap: dinamic(40px);
+        }
+    }
+
+    &__mobile-togle {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: block;
+        padding: 1rem;
+        border: 1px solid $headerMobile;
+        border-radius: 1rem;
+        @include singleFont ($Poppins, 400, 1.5rem, 2rem);
+        color: $headerMobile;
+        text-transform: capitalize;
+        cursor: pointer;
+        animation: login 5s infinite ease-in-out;
+        transition: all 0.3s linear;
+
+        &:focus,
+        &:hover {
+            color: $mainAccent;
+            border-color: $mainAccent;
+        }
+
+        &:active {
+            animation: blimDark 0.1s;
+        }
+    }
+
+    &__mobile-togle-input {
+        display: none;
+    }
+
+    &:has(.header__mobile-togle-input:checked) {
+        .mobile-menu {
+            visibility: hidden;
+        }
+
+        .mobile-login {
+            visibility: visible;
         }
     }
 }

@@ -42,10 +42,10 @@
     }
 
     &__decor-wrapper {
+        display: none;
         position: absolute;
         top: -2rem;
         left: 0;
-        display: none;
         z-index: -1;
 
         @media screen and (max-width: $toMobile) {

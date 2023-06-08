@@ -11,6 +11,10 @@
         top: 0;
         width: 100%;
         z-index: -1;
+
+        @media screen and (max-width: $toMobile) {
+            display: none;
+        }
     }
 
     &__background-img {

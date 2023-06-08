@@ -1,0 +1,130 @@
+.book-trip {
+    position: relative;
+
+    &__container {
+        @include container(1114px);
+        margin: 18.6rem auto;
+
+        @media screen and (max-width: $toMobile) {
+            margin: 14rem auto;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @media screen and (max-width: $toMobile) {
+            flex-direction: column;
+            gap: 6rem;
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        margin-bottom: 1.5rem;
+        @include sectionSubTitle;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $toMobile) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+        max-width: 51.1rem;
+        width: 100%;
+        @include sectionTitle;
+    }
+
+    &__steps-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+        max-width: 39.5rem;
+        width: 100%;
+    }
+
+    &__step-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 2.1rem;
+    }
+
+    &__step-item {
+        max-width: 4.8rem;;
+        width: 100%;
+        height: 4.8rem;
+        padding: 1.3rem;
+        border-radius: 1.3rem;
+
+        &_yellow {
+            background-color: $easyStepYellow;
+        }
+
+        &_red {
+            background-color: $easyStepRed;
+        }
+
+        &_blue {
+            background-color: $easyStepBlue;
+        }
+    }
+
+    &__step-svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__step-icon {
+        fill: $white;
+    }
+
+    &__step-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    &__step-title {
+        @include singleFont($Poppins, 700, 1.6rem, 2rem);
+        color: $mainText;
+    }
+
+    &__step-descr {
+        @include singleFont($Poppins, 400, 1.6rem, 2rem);
+        color: $mainText;
+    }
+
+    &__decor-top-wrapper {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: -1;
+
+        @media screen and (max-width: $toMobile) {
+            display: block;
+        }
+    }
+
+    &__decor-bottom-wrapper {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(44%);
+
+        @media screen and (max-width: $toMobile) {
+            display: block;
+        }
+    }
+}

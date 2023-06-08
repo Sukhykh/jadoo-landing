@@ -1,0 +1,113 @@
+.testimonials {
+	&__container {
+		@include container(1040px);
+		margin-top: 20rem;
+		margin-bottom: 17.3rem;
+
+		@media screen and (max-width: $toMobile) {
+			margin-top: 15.6rem;
+			margin-bottom: 7.4rem;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+
+		@media screen and (max-width: $toMobile) {
+			flex-direction: column;
+			gap: 8rem;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 0.8rem;
+		@include sectionSubTitle;
+		text-transform: uppercase;
+
+		@media screen and (max-width: $toMobile) {
+			margin-bottom: 2.7rem;
+		}
+	}
+
+	&__title {
+		max-width: 40.9rem;
+		width: 100%;
+		@include sectionTitle;
+
+        @media screen and (max-width: $toMobile) {
+            margin-inline: auto;
+			max-width: 28.7rem;
+		}
+	}
+
+	&__quote-wrapper {
+		position: relative;
+		padding-top: 3.4rem;
+		padding-left: 3.7rem;
+
+        @media screen and (max-width: $toMobile) {
+			padding: unset;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+		}
+	}
+
+	&__quote {
+		padding: 2.8rem 6.8rem 3.4rem 3.4rem;
+		background: #ffffff;
+		box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+			0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+			0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+			0px 20px 13px rgba(0, 0, 0, 0.01),
+			0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+			0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+		border-radius: 10px;
+
+		@media screen and (max-width: $toMobile) {
+			padding: 0 0.9rem 1.6rem;
+		}
+	}
+
+	&__img-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+        @media screen and (max-width: $toMobile) {
+			position: static;
+		}
+	}
+
+	&__quote-text {
+		@include singleFont($Poppins, 500, 1.6rem, 3.2rem);
+		color: $mainText;
+		max-width: 40.2rem;
+		width: 100%;
+	}
+
+	&__quote-author {
+		@include singleFont($Poppins, 600, 1.8rem, 2.7rem);
+		color: $mainText;
+		text-transform: capitalize;
+		margin-top: 3.4rem;
+
+		@media screen and (max-width: $toMobile) {
+			margin-top: 1.7rem;
+            text-align: center;
+		}
+	}
+
+	&__quote-descr {
+		@include singleFont($Poppins, 500, 1.4rem, 2.1rem);
+		color: $mainText;
+		text-transform: capitalize;
+		margin-top: 0.4rem;
+
+        @media screen and (max-width: $toMobile) {
+			text-align: center;
+		}
+	}
+}

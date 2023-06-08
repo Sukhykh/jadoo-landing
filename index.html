@@ -28,61 +28,65 @@
 							>
 						</a>
 					</div>
-					<nav class="header__desktop-menu desktop-menu">
-						<ul class="desktop-menu__list">
-							<li class="desktop-menu__item">
-								<a class="desktop-menu__link" href="">
-									destination
-								</a>
-							</li>
-							<li class="desktop-menu__item">
-								<a class="desktop-menu__link" href="">
-									hotels
-								</a>
-							</li>
-							<li class="desktop-menu__item">
-								<a class="desktop-menu__link" href="">
-									flights
-								</a>
-							</li>
-							<li class="desktop-menu__item">
-								<a class="desktop-menu__link" href="">
-									booking
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="header__login-bar desktop-login">
-						<a
-							class="desktop-login__btn desktop-login__btn_login"
-							href="#"
-							>Login</a
-						>
-						<a
-							class="desktop-login__btn desktop-login__btn_sign-up"
-							href="#"
-							>Sign up</a
-						>
-					</div>
-					<div class="header__icon-bar">
-						<select
-							class="header__language language"
-							name="language"
-						>
-							<option value="EN" selected>EN</option>
-							<option value="UA">UA</option>
-						</select>
-						<label class="header__burger-btn burger-btn">
-							<input class="burger-btn__input" type="checkbox">
-							<span class="burger-btn__item">
-								<svg class="burger-btn__svg">
-									<use
-										class="burger-btn__icon"
-										xlink:href="assets/img/sprite.svg#mobileMenu"
-									></use>
-								</svg>
-							</span>
-						</label>
+					<div class="header__menu-wrapper">
+						<nav class="header__desktop-menu desktop-menu">
+							<ul class="desktop-menu__list">
+								<li class="desktop-menu__item">
+									<a class="desktop-menu__link" href="">
+										destination
+									</a>
+								</li>
+								<li class="desktop-menu__item">
+									<a class="desktop-menu__link" href="">
+										hotels
+									</a>
+								</li>
+								<li class="desktop-menu__item">
+									<a class="desktop-menu__link" href="">
+										flights
+									</a>
+								</li>
+								<li class="desktop-menu__item">
+									<a class="desktop-menu__link" href="">
+										booking
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__button-wrapper">
+							<div class="header__login-bar desktop-login">
+								<a
+									class="desktop-login__btn desktop-login__btn_login"
+									href="#"
+									>Login</a
+								>
+								<a
+									class="desktop-login__btn desktop-login__btn_sign-up"
+									href="#"
+									>Sign up</a
+								>
+							</div>
+							<div class="header__icon-bar">
+								<select
+									class="header__language language"
+									name="language"
+								>
+									<option value="EN" selected>EN</option>
+									<option value="UA">UA</option>
+								</select>
+								<label class="header__burger-btn burger-btn">
+									<input class="burger-btn__input" type="checkbox">
+									<span class="burger-btn__item">
+										<svg class="burger-btn__svg">
+											<use
+												class="burger-btn__icon"
+												xlink:href="assets/img/sprite.svg#mobileMenu"
+											></use>
+										</svg>
+									</span>
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="header__mobile-wrapper">
@@ -122,6 +126,10 @@
 							>Sign up</a
 						>
 					</div>
+					<label class="header__mobile-togle">
+						<input class="header__mobile-togle-input" type="checkbox" >
+						Login/Menu
+					</label>
 				</div>
 			</div>
 		</header>
@@ -309,6 +317,10 @@
 									</p>
 								</div>
 							</div>
+							<label class="services__button">
+								<input class="services__input" type="checkbox">
+								more
+							</label>
 						</div>
 					</div>
 				</div>
@@ -486,6 +498,24 @@
 			<section class="main__book-trip book-trip">
 				<div class="book-trip__container">
 					<div class="book-trip__wrapper">
+						<div class="book-trip__decor-top-wrapper">
+							<img
+								class="book-trip__decor-top"
+								src="./assets/img/decor-two.png"
+								alt="decor"
+								width="88"
+								height="165"
+							>
+						</div>
+						<div class="book-trip__decor-bottom-wrapper">
+							<img
+								class="book-trip__decor-bottom"
+								src="./assets/img/decor-three.png"
+								alt="decor"
+								width="153"
+								height="166"
+							>
+						</div>
 						<div class="book-trip__content-wrapper">
 							<p class="book-trip__subtitle">
 								easy and fast
@@ -577,7 +607,7 @@
 									trip to greece
 								</h3>
 								<p class="book-trip-card__descr">
-									14-29 June &vert; by Robbin joseph
+									14-29 June &vert; by Robbin Joseph
 								</p>
 								<div class="book-trip-card__icon-bar">
 									<div class="book-trip-card__icon-item">
@@ -631,6 +661,7 @@
 										<input
 											class="book-trip-card__like-input"
 											type="checkbox"
+											checked
 										>
 									</label>
 								</div>
@@ -681,18 +712,27 @@
 								What people say about us
 							</h2>
 						</div>
-						<div class="testimonials__quote">
-							<p class="testimonials__quote-text">
-								&quot;On the Windows talking painted pasture yet
-								its express parties use. Sure last upon he same
-								as knew next. Of believed or diverted no.&quot;
-							</p>
-							<p class="testimonials__quote-author">
-								mike taylor
-							</p>
-							<p class="testimonials__quote-descr">
-								lahore, pakistan
-							</p>
+						<div class="testimonials__quote-wrapper">
+							<div class="testimonials__img-wrapper">
+								<img class="testimonials__img"
+								src="assets/img/testimonials.png" 
+								alt="photo"
+								width="68"
+								height="68" >
+							</div>
+							<div class="testimonials__quote">
+								<p class="testimonials__quote-text">
+									&quot;On the Windows talking painted pasture yet
+									its express parties use. Sure last upon he same
+									as knew next. Of believed or diverted no.&quot;
+								</p>
+								<p class="testimonials__quote-author">
+									mike taylor
+								</p>
+								<p class="testimonials__quote-descr">
+									lahore, pakistan
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

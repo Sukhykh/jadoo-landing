@@ -31,3 +31,24 @@
         transform: translateX(0) scale(1)
     }
 }
+
+@keyframes login {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: $white;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    70% {
+        width: 40%;
+    }
+}

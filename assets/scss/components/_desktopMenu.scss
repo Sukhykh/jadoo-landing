@@ -6,6 +6,10 @@
     &__list {
         display: flex;
         gap: dinamic(60px);
+
+        @media screen and (max-width: 900px) {
+            gap: dinamic(40px);
+        }
     }
 
     &__item {
