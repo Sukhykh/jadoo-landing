@@ -12,7 +12,8 @@
     &__item {
         text-align: center;
         transition: scale 0.3s linear;
-        &:has(.mobile-menu__link:hover) {
+        &:has(.mobile-menu__link:hover),
+        &:has(.mobile-menu__link:focus) {
             scale: 1.2;
         }
     }

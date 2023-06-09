@@ -1,0 +1,166 @@
+.actionform {
+	&__container {
+		@include container(1170px);
+		margin: 12.4rem auto;
+
+		@media screen and (max-width: $toMobile) {
+			margin: 0 auto;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__form {
+		position: relative;
+		background: $formBackground;
+		border-radius: 13rem 2rem 2rem 2rem;
+		padding: 8rem 15.5rem;
+
+        @media screen and (max-width: $toMobile) {
+            display: none;
+        }
+	}
+
+	&__title {
+		@include singleFont($Poppins, 600, 3.3rem, 5.4rem);
+		color: $mainText;
+		text-align: center;
+	}
+
+	&__action-bar {
+		margin-top: 7.4rem;
+		display: flex;
+		justify-content: center;
+		column-gap: 3.8rem;
+	}
+
+	&__button {
+		padding: 2.3rem 5rem;
+		border: 0.1rem solid $mainAccent;
+		border-radius: 1rem;
+		background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+		@include singleFont($OpenSans, 600, 1.7rem, 2.3rem);
+		color: $white;
+        cursor: pointer;
+		transition: all 0.3s linear;
+
+		&:hover,
+		&:focus {
+			background: linear-gradient(
+				180deg,
+				transparent 0%,
+				transparent 100%
+			);
+			color: $mainAccent;
+		}
+
+		&:active {
+			animation: blimDark 0.1s;
+		}
+
+        &_outer {
+            display: none;
+
+            @media screen and (max-width: $toMobile) {
+                display: block;
+            }
+        }
+	}
+
+	&__decore-wrapper {
+		position: absolute;
+		opacity: 0.2;
+		z-index: -1;
+
+		&_big {
+			width: 39rem;
+			bottom: 0;
+			left: 2rem;
+		}
+
+		&_small {
+			width: 26.7rem;
+			right: -3.6rem;
+			top: 3.5rem;
+			transform: rotateZ(-90deg);
+		}
+	}
+
+	&__decore-img {
+		width: 100%;
+		height: auto;
+	}
+
+	&__input-email {
+		background-color: $white;
+		max-width: 42.1rem;
+		width: 100%;
+		padding-inline: 2.8rem;
+		border-radius: 1rem;
+		@include singleFont($Montserrat, 400, 1.4rem, 1.7rem);
+		color: $black;
+
+		&::placeholder {
+			@include singleFont($Montserrat, 400, 1.4rem, 1.7rem);
+			color: $mainText;
+		}
+
+		&:focus,
+		&:hover {
+			outline: 0.1rem solid $mainAccent;
+		}
+
+		&:valid {
+			outline: 0.1rem solid $black;
+		}
+	}
+
+	&__telegram-item {
+		position: absolute;
+		top: -1.3rem;
+		right: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		width: 7rem;
+		height: 7rem;
+		border-radius: 50%;
+		background: linear-gradient(201.65deg, #747def 10.27%, #5e3be1 100%);
+    
+        @media screen and (max-width: 1040px) {
+			top: -0.7rem; 
+            right: -1rem;
+		}
+
+        @media screen and (max-width: $toMobile) {
+            position: static;
+        }
+    }
+
+    &__telegram-img {
+        transform: rotateZ(-30deg);
+    }
+
+    &__button-bar {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    &__decore {
+        position: absolute;
+        bottom: dinamic(-70px);
+        right: dinamic(-100px);
+
+        @media screen and (max-width: 1080px) {
+            right: 0;
+        }
+
+        @media screen and (max-width: $toMobile) {
+            display: none;
+        }
+    }
+}
+

@@ -714,11 +714,12 @@
 						</div>
 						<div class="testimonials__quote-wrapper">
 							<div class="testimonials__img-wrapper">
-								<img class="testimonials__img"
-								src="assets/img/testimonials.png" 
-								alt="photo"
-								width="68"
-								height="68" >
+								<img 
+									class="testimonials__img"
+									src="assets/img/testimonials.png" 
+									alt="photo"
+									width="68"
+									height="68" >
 							</div>
 							<div class="testimonials__quote">
 								<p class="testimonials__quote-text">
@@ -831,6 +832,7 @@
 					<div class="actionform__wrapper">
 						<form
 							class="actionform__form"
+							id="emailForm"
 							action="#"
 							method="GET"
 							autocomplete="off"
@@ -839,17 +841,52 @@
 								Subscribe to get information, latest news and
 								other interesting offers about Cobham
 							</h2>
-							<input
-								class="actionform__input-email"
-								type="email"
-								name="email"
-								placeholder="Your email"
-								required
-							>
-							<button class="actionform__button" type="submit">
+							<div class="actionform__action-bar">
+								<input
+									class="actionform__input-email"
+									type="email"
+									name="email"
+									placeholder="Your email"
+									pattern="^([a-zA-Z0-9_.\-]+)@([a-zA-Z0-9.\-]+\.)+([a-z.]{2,})$"
+									required
+								>
+								<button class="actionform__button actionform__button_inner" type="submit" form="emailForm">
+									Subscribe
+								</button>
+							</div>
+							<div class="actionform__decore-wrapper actionform__decore-wrapper_big">
+								<img 
+									class="actionform__decore-img" 
+									src="assets/img/form-decore.png"
+									alt="form-decore"
+									width="390"
+									height="283">
+							</div>
+							<div class="actionform__decore-wrapper actionform__decore-wrapper_small">
+								<img 
+									class="actionform__decore-img" 
+									src="assets/img/form-decore.png"
+									alt="form-decore"
+									width="267"
+									height="208">
+							</div>
+						</form>
+						<div class="actionform__decore">
+							<img 
+								class="actionform__img" 
+								src="assets/img/decor-three.png"
+								alt="decore"
+								width="153"
+								height="166">
+						</div>
+						<div class="actionform__button-bar">
+							<button class="actionform__button actionform__button_outer" type="submit" form="emailForm">
 								Subscribe
 							</button>
-						</form>
+							<a class="actionform__telegram-item" href="#">
+								<img class="actionform__telegram-img" src="assets/img/telegram.png" alt="telegram" width="35" height="30">	
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -865,71 +902,73 @@
 								much longer.
 							</p>
 						</div>
-						<div class="footer__company-section">
-							<div class="footer__subtitle">
-								Company
+						<div class="footer__navigation">
+							<div class="footer__company-section">
+								<div class="footer__subtitle">
+									Company
+								</div>
+								<ul class="footer__menu">
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											About
+										</a>
+									</li>
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Careers
+										</a>
+									</li>
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Mobile
+										</a>
+									</li>
+								</ul>
 							</div>
-							<ul class="footer__menu">
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										About
-									</a>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Careers
-									</a>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Mobile
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__contact-section">
-							<div class="footer__subtitle">
-								Contact
+							<div class="footer__contact-section">
+								<div class="footer__subtitle">
+									Contact
+								</div>
+								<ul class="footer__menu">
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Help/FAQ
+										</a>
+									</li>
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Press
+										</a>
+									</li>
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Affilates
+										</a>
+									</li>
+								</ul>
 							</div>
-							<ul class="footer__menu">
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Help/FAQ
-									</a>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Press
-									</a>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Affilates
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__more-section">
-							<div class="footer__subtitle">
-								More
+							<div class="footer__more-section">
+								<div class="footer__subtitle">
+									More
+								</div>
+								<ul class="footer__menu">
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Airlinefees
+										</a>
+									</li>
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Airline
+										</a>
+									</li>
+									<li class="footer__item">
+										<a class="footer__link" href="#">
+											Low fare tips
+										</a>
+									</li>
+								</ul>
 							</div>
-							<ul class="footer__menu">
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Airlinefees
-									</a>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Airline
-									</a>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="#">
-										Low fare tips
-									</a>
-								</li>
-							</ul>
 						</div>
 						<div class="footer__link-section">
 							<div class="footer__social-bar">
@@ -941,7 +980,7 @@
 								>
 									<svg class="footer__social-svg">
 										<use
-											class="footer__social-link"
+											class="footer__social-link footer__social-link_facebook"
 											xlink:href="assets/img/sprite.svg#facebook"
 										></use>
 									</svg>
@@ -954,7 +993,7 @@
 								>
 									<svg class="footer__social-svg">
 										<use
-											class="footer__social-link"
+											class="footer__social-link footer__social-link_instagram"
 											xlink:href="assets/img/sprite.svg#instagram"
 										></use>
 									</svg>
@@ -967,7 +1006,7 @@
 								>
 									<svg class="footer__social-svg">
 										<use
-											class="footer__social-link"
+											class="footer__social-link footer__social-link_twitter"
 											xlink:href="assets/img/sprite.svg#twitter"
 										></use>
 									</svg>
@@ -980,7 +1019,7 @@
 								>
 									<svg class="footer__social-svg">
 										<use
-											class="footer__social-link"
+											class="footer__social-link footer__social-link_youtube"
 											xlink:href="assets/img/sprite.svg#youtube"
 										></use>
 									</svg>
@@ -1059,9 +1098,17 @@
 							</div>
 						</div>
 					</div>
-					<p class="foter__copyright">
+					<p class="footer__copyright">
 						All rights reserved&commat;jadoo.co
 					</p>
+					<div class="footer__decore-wrapper">
+						<img 
+							class="footer__decore-img"
+							src="assets/img/footer-decore.png" 
+							alt="decore"
+							width="265"
+							height="367">
+					</div>
 				</div>
 			</div>
 		</footer>
