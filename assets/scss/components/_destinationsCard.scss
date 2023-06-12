@@ -1,5 +1,7 @@
 .destinations-card {
 	position: relative;
+    border-radius: 2.4rem;
+    overflow: hidden;
 	filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02))
 		drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852))
 		drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481))
@@ -63,7 +65,7 @@
     }
 
     &:hover {
-        & .destinations-card__img {
+        & .destinations-card__img-wrapper {
             scale: 1.2;
         }
     }
@@ -71,6 +73,7 @@
     &__img-wrapper {
         border-radius: 2.4rem;
         overflow: hidden;
+        transition: all 0.3s linear;
     }
 
     &__img {
